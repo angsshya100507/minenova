@@ -303,7 +303,7 @@ function MineMapPage() {
           inset:0;
           background-image:
             linear-gradient(180deg,rgba(3,5,7,.22),rgba(3,5,7,.08) 45%,rgba(3,5,7,.38)),
-            url('/mine-map.png');
+            url(`${import.meta.env.BASE_URL}mine-map.png`);
           background-size:cover;
           background-position:center center;
           background-repeat:no-repeat;
@@ -899,7 +899,7 @@ function RoverControlPage() {
             <div className="rc-card-title"><span>ROVER STATUS</span><small>LIVE TELEMETRY</small></div>
 
             <div className={`rc-rover-visual ${cameraLight ? "light-on" : ""}`}>
-              <img src="/RoverC.png" alt="MNR-01 Rover" />
+              <img src={`${import.meta.env.BASE_URL}RoverC.png`} alt="MNR-01 Rover" />
             </div>
 
             <div className="rc-identity">
@@ -3122,8 +3122,8 @@ function NetworkPage() {
   ];
 
   const nodeImage = selectedNode.status === "CRITICAL"
-    ? "/mine-map.png"
-    : "/mine-map.png";
+    ? ? `${import.meta.env.BASE_URL}mine-map.png`
+: `${import.meta.env.BASE_URL}mine-map.png`;
 
   return (
     <section className="network-page">
@@ -3206,7 +3206,7 @@ function NetworkPage() {
           border-color:rgba(57,197,230,.38);
           background:
             linear-gradient(180deg,rgba(2,8,11,.14),rgba(2,8,11,.28)),
-            url('/mine-map.png');
+            url(`${import.meta.env.BASE_URL}mine-map.png`);
           background-size:cover;
           background-position:center;
         }
@@ -3365,7 +3365,7 @@ function NetworkPage() {
         .net-node-photo{
           height:88px;margin:9px 0 8px;border-radius:7px;
           border:1px solid rgba(255,255,255,.10);
-          background-image:linear-gradient(rgba(4,8,10,.18),rgba(4,8,10,.32)),url('/mine-map.png');
+          background-image:linear-gradient(rgba(4,8,10,.18),rgba(4,8,10,.32)),url(`${import.meta.env.BASE_URL}mine-map.png`);
           background-size:cover;background-position:center;
           box-shadow:inset 0 0 25px rgba(0,0,0,.45);
         }
